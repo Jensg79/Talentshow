@@ -1,4 +1,1 @@
-# Talentshow
-## Eine Website mit Python
-- die ganze Website wurde mit Python programmiert
-- es wurde das Modul PyneCone genutzt
+# Talentshow## Eine Website mit Python- die ganze Website wurde mit Python programmiert- es wurde das Modul PyneCone genutzt- Startseite mit Ablaufplan und Regeln

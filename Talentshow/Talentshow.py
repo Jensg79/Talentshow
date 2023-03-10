@@ -3,6 +3,7 @@ from pcconfig import config
 
 import pynecone as pc
 
+
 ablauf = "http://localhost:3000/ablauf"
 start = "http://localhost:3000"
 docs_url = "http://localhost:3000/ablauf"
@@ -17,8 +18,7 @@ class State(pc.State):
 
 
 def startseite() -> pc.Component:
-    return pc.center(
-        pc.vstack(
+    return pc.center(pc.vstack(
             pc.heading("Talentshow 2023", font_size="2em", color='red'),
             pc.box('Willkommen zur Talentshow des Gymnasium Gröbenzell.'),
             pc.link(
@@ -94,7 +94,8 @@ def startseite() -> pc.Component:
             spacing="1.5em",
             font_size="2em",
         ),
-        padding_top="10%",
+        pc.image(src="assets/logo.png", width="5em"),
+        padding_top="15%",
     )
 
 
@@ -132,10 +133,26 @@ def regeln() -> pc.Component:
             ),
         spacing="1.5em",)
     )
-
+def Jury() -> pc.Component:
+    return pc.center(pc.vstack(
+            pc.heading("Talentshow 2023", font_size="3em", color='red'),
+            pc.box('Die Jury', font_size="2em", color='blue'),
+            pc.link(
+                "Startseite",
+                href='/',
+                border="0.1em solid",
+                padding="0.5em",
+                border_radius="0.5em",
+                _hover={
+                    "color": "rgb(107,99,246)",
+                },
+            ),
+        spacing="1.5em",)
+    )
 app = pc.App()
 app.add_page(startseite, route="/")
 app.add_page(ablauf, route="/ablauf")
 app.add_page(regeln, route="/regeln")
+app.add_page(regeln, route="/Jury")
 
 app.compile()
