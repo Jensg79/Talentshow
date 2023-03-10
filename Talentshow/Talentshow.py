@@ -104,7 +104,7 @@ def startseite() -> pc.Component:
                                spacing="1em",
                                font_size="1.5em",
                                ),
-                     padding_top="15%",
+                     padding_top="5%",
                      )
 
 
