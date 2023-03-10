@@ -6,9 +6,3 @@ config = pc.Config(
     env=pc.Env.DEV,
 )
 
-
-class User(pc.Model, table=True):
-    name: str
-    buehne: float
-    performe: float
-    kat3: float
