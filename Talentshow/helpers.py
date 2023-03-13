@@ -1,6 +1,6 @@
 import pynecone as pc
 
-from Talentshow.Talentshow import Wertung
+# from Talentshow.Talentshow import Wertung
 
 
 def navbar():

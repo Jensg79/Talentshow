@@ -124,7 +124,7 @@ def ablauf() -> pc.Component:
                   ),
                   spacing="1em",
 
-                  ),)
+                  ), )
 
 
 def regeln() -> pc.Component:
@@ -164,10 +164,29 @@ def jury() -> pc.Component:
     )
 
 
+def wertung() -> pc.Component:
+    return pc.center(pc.vstack(
+        pc.image(src="/logo.png", width="10em"),
+        pc.heading("Talentshow 2023", font_size="3em", color='red'),
+        pc.box('Die Auswertung', font_size="2em", color='blue'),
+        pc.link(
+            "Startseite",
+            href='/',
+            border="0.1em solid",
+            padding="0.5em",
+            border_radius="0.5em",
+            _hover={
+                "color": "rgb(107,99,246)",
+            },
+        ),
+        spacing="1.5em", )
+    )
+
+
 app = pc.App()
 app.add_page(startseite, route="/")
 app.add_page(ablauf, route="/ablauf")
 app.add_page(regeln, route="/regeln")
 app.add_page(regeln, route="/jury")
-
+app.add_page(regeln, route="/wertung")
 app.compile()
